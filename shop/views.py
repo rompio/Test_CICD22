@@ -4,4 +4,4 @@ from django.http import HttpResponse
 
 def index(request):
     items = Item.objects.all()
-    return HttpResponse(items)
+    return render(request, 'shop/index.html', {'items': items})
